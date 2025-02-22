@@ -68,7 +68,7 @@ print(f"Probabilidade de obter soma 5: {probabilidade*100:.2f}%")
 probabilidade = math.comb(3, 1) / math.comb(36, 1)
 print(f"Probabilidade de obter soma igual ou menor que 3: {probabilidade*100:.2f}%")
 #8
-
+#sepa ta errada
 n = 5
 k = 3
 p = 0.5
