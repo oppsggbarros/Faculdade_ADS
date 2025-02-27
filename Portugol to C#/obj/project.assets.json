@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\eu msm\\.nuget\\packages\\": {}
+    "C:\\Users\\Graveto dGravata\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\Portugol to C#.csproj",
+      "projectUniqueName": "C:\\Users\\Graveto dGravata\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\Portugol to C#.csproj",
       "projectName": "Portugol to C#",
-      "projectPath": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\Portugol to C#.csproj",
-      "packagesPath": "C:\\Users\\eu msm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\obj\\",
+      "projectPath": "C:\\Users\\Graveto dGravata\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\Portugol to C#.csproj",
+      "packagesPath": "C:\\Users\\Graveto dGravata\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Graveto dGravata\\Documents\\GitHub\\Faculdade_ADS\\Portugol to C#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\eu msm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Graveto dGravata\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"

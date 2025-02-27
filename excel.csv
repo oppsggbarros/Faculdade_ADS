@@ -1,16 +1,13 @@
-passo,PC,Instrução,Variável1,Variável2,Variável3,Variável4,Variável5,Memória Result
-1,1,LOAD A. 1000,1
-2,2,LOAD B. 1001,1,2
-3,3,LOAD C. 1002,1,2,3
-4,4,LOAD D. 1003,1,2,3,4
-5,5,
-6,6,
-7,7,
-8,8,
-9,9,
-10,10,
-11,11,
-12,12,
-13,13,
-14,14,
-15,15,
+passo;PC;Instrucao;A;B;C;D;Variavel5;Memoria Result
+1;1;LOAD A, 1000;1;;;;;
+2;2;LOAD B, 1001;1;2;;;;
+3;3;LOAD C, 1002;1;2;3;;;
+4;4;LOAD D, 1003;1;2;3;4;;
+5;5;ADD A, B;3;2;3;4;;
+6;6;ADD C, D;3;2;7;4;;
+7;7;MULT A, C;24;2;7;4;;
+8;8;STORE 100,. A;24;2;7;4;;24
+9;9;HALT;24;2;7;4;;24
+;;;;;;;;;;
+;;;;;;;;;;
+Passo;PC;Instrucao
