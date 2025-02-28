@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Portugol to C#.props" />
-</Project>

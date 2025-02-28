@@ -1,0 +1,15 @@
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\bin\Debug\net9.0\Exercicio_Portugol.exe
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\bin\Debug\net9.0\Exercicio_Portugol.deps.json
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\bin\Debug\net9.0\Exercicio_Portugol.runtimeconfig.json
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\bin\Debug\net9.0\Exercicio_Portugol.dll
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\bin\Debug\net9.0\Exercicio_Portugol.pdb
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.AssemblyInfoInputs.cache
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.AssemblyInfo.cs
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.csproj.CoreCompileInputs.cache
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.sourcelink.json
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.dll
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\refint\Exercicio_Portugol.dll
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.pdb
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\Exercicio_Portugol.genruntimeconfig.cache
+C:\Users\eu msm\Documents\GitHub\Faculdade_ADS\UC-3\Exercicio_Portugol\obj\Debug\net9.0\ref\Exercicio_Portugol.dll
