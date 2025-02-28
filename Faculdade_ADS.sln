@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UC-3", "UC-3", "{AC53A729-E4EC-88EA-1CB8-4E67F89B6889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio_Portugol", "UC-3\Exercicio_Portugol\Exercicio_Portugol.csproj", "{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9} = {AC53A729-E4EC-88EA-1CB8-4E67F89B6889}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD6B29D-A7F3-4EF2-9D27-5E3DCE5A5217}
+	EndGlobalSection
+EndGlobal
