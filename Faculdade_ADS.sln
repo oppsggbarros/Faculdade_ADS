@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio_Portugol", "UC-3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio_Carnaval", "UC-3\Exercicio_Carnaval\Exercicio_Carnaval.csproj", "{2B983FF2-CCCD-4C84-914D-F40169D1157B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "If_else", "UC-3\If_else\If_else.csproj", "{B1F4400A-367F-4A49-9998-5774C4BA8002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{2B983FF2-CCCD-4C84-914D-F40169D1157B}.Release|x64.Build.0 = Release|Any CPU
 		{2B983FF2-CCCD-4C84-914D-F40169D1157B}.Release|x86.ActiveCfg = Release|Any CPU
 		{2B983FF2-CCCD-4C84-914D-F40169D1157B}.Release|x86.Build.0 = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|x64.Build.0 = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Debug|x86.Build.0 = Debug|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|x64.ActiveCfg = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|x64.Build.0 = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|x86.ActiveCfg = Release|Any CPU
+		{B1F4400A-367F-4A49-9998-5774C4BA8002}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +64,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CA8A92C7-CD8A-7E98-6396-9F75A69B3AA9} = {AC53A729-E4EC-88EA-1CB8-4E67F89B6889}
 		{2B983FF2-CCCD-4C84-914D-F40169D1157B} = {AC53A729-E4EC-88EA-1CB8-4E67F89B6889}
+		{B1F4400A-367F-4A49-9998-5774C4BA8002} = {AC53A729-E4EC-88EA-1CB8-4E67F89B6889}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BD6B29D-A7F3-4EF2-9D27-5E3DCE5A5217}

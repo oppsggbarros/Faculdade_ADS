@@ -1,0 +1,15 @@
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.AssemblyInfoInputs.cache
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.AssemblyInfo.cs
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.csproj.CoreCompileInputs.cache
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.sourcelink.json
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\bin\Debug\net9.0\If_else.exe
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\bin\Debug\net9.0\If_else.deps.json
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\bin\Debug\net9.0\If_else.runtimeconfig.json
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\bin\Debug\net9.0\If_else.dll
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\bin\Debug\net9.0\If_else.pdb
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.dll
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\refint\If_else.dll
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.pdb
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\If_else.genruntimeconfig.cache
+C:\Users\gabrielgravena\Documents\GitHub\Faculdade_ADS\UC-3\If_else\obj\Debug\net9.0\ref\If_else.dll
