@@ -8,32 +8,24 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gabrielgravena\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\eu msm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabrielgravena\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\Exercicio_Carnaval.csproj",
+      "projectUniqueName": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\Exercicio_Carnaval.csproj",
       "projectName": "Exercicio_Carnaval",
-      "projectPath": "C:\\Users\\gabrielgravena\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\Exercicio_Carnaval.csproj",
-      "packagesPath": "C:\\Users\\gabrielgravena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabrielgravena\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\obj\\",
+      "projectPath": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\Exercicio_Carnaval.csproj",
+      "packagesPath": "C:\\Users\\eu msm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eu msm\\Documents\\GitHub\\Faculdade_ADS\\UC-3\\Exercicio_Carnaval\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gabrielgravena\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\eu msm\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

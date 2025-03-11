@@ -1,0 +1,5 @@
+print("piton de novo")
+print("Dia", "Mês", "Ano", sep='/')
+print(type(42.01))
+print(type("Olha ai"))
+print(type(42))
