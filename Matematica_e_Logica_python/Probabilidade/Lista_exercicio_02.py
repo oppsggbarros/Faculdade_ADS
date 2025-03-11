@@ -68,3 +68,156 @@ P_JS_dado_Python = 0.8
 P_JS = P_Python * P_JS_dado_Python + (1 - P_Python) * 0 
 P_Python_dado_JS = (P_Python * P_JS_dado_Python) / P_JS
 print("R:", round(P_Python_dado_JS * 100), "%")
+
+from math import comb
+
+# Exercício 10
+def prob_defeito_linha_b():
+    prob_A = 0.7
+    prob_B = 0.3
+    defeito_A = 0.02
+    defeito_B = 0.05
+
+    
+    prob_defeito_total = (prob_A * defeito_A) + (prob_B * defeito_B)
+
+    prob_B_dado_defeito = (prob_B * defeito_B) / prob_defeito_total
+    return prob_B_dado_defeito
+
+# Exercício 11
+def prob_matematica_ou_fisica():
+    total_estudantes = 100
+    matematica = 60
+    fisica = 50
+    ambas = 30
+
+    prob_matematica_ou_fisica = (matematica + fisica - ambas) / total_estudantes
+    return prob_matematica_ou_fisica
+
+# Exercício 12
+def prob_pelo_menos_uma_medida():
+    senha_forte = 0.7
+    autenticacao_dois_fatores = 0.5
+    ambas = 0.4
+
+    prob_pelo_menos_uma = senha_forte + autenticacao_dois_fatores - ambas
+    return prob_pelo_menos_uma
+
+# Exercício 13
+def prob_defeito():
+    prob_A = 0.5
+    prob_B = 0.3
+    prob_C = 0.2
+    defeito_A = 0.03
+    defeito_B = 0.05
+    defeito_C = 0.08
+
+    prob_defeito_total = (prob_A * defeito_A) + (prob_B * defeito_B) + (prob_C * defeito_C)
+    return prob_defeito_total
+
+# Exercício 14
+def prob_medico2_dado_diagnostico_correto():
+    prob_M1 = 0.4
+    prob_M2 = 0.35
+    prob_M3 = 0.25
+    acerto_M1 = 0.9
+    acerto_M2 = 0.85
+    acerto_M3 = 0.8
+
+    prob_diagnostico_correto = (prob_M1 * acerto_M1) + (prob_M2 * acerto_M2) + (prob_M3 * acerto_M3)
+
+    
+    prob_M2_dado_correto = (prob_M2 * acerto_M2) / prob_diagnostico_correto
+    return prob_M2_dado_correto
+
+# Exercício 15
+def prob_ataque_dado_alerta():
+    prob_ataque = 0.01
+    prob_detectar_ataque = 0.95
+    prob_falso_positivo = 0.05
+
+    prob_alerta = (prob_ataque * prob_detectar_ataque) + ((1 - prob_ataque) * prob_falso_positivo)
+
+    prob_ataque_dado_alerta = (prob_ataque * prob_detectar_ataque) / prob_alerta
+    return prob_ataque_dado_alerta
+
+# Exercício 16
+def prob_doente_dado_positivo():
+    prob_doente = 0.005
+    sensibilidade = 0.98
+    especificidade = 0.95
+
+    prob_positivo = (prob_doente * sensibilidade) + ((1 - prob_doente) * (1 - especificidade))
+
+    prob_doente_dado_positivo = (prob_doente * sensibilidade) / prob_positivo
+    return prob_doente_dado_positivo
+
+# Exercício 17
+def prob_exatamente_2_mulheres():
+    total_homens = 4
+    total_mulheres = 6
+    total_pessoas = total_homens + total_mulheres
+    escolhidos = 3
+
+    maneiras_2_mulheres = comb(total_mulheres, 2) * comb(total_homens, 1)
+
+    total_maneiras = comb(total_pessoas, escolhidos)
+
+    
+    prob_2_mulheres = maneiras_2_mulheres / total_maneiras
+    return prob_2_mulheres
+
+# Exercício 18
+def prob_todas_vermelhas():
+    total_vermelhas = 7
+    total_azuis = 5
+    total_bolas = total_vermelhas + total_azuis
+    escolhidas = 3
+
+    maneiras_3_vermelhas = comb(total_vermelhas, 3)
+
+    total_maneiras = comb(total_bolas, escolhidas)
+
+    prob_3_vermelhas = maneiras_3_vermelhas / total_maneiras
+    return prob_3_vermelhas
+
+# Exercício 19
+def prob_pelo_menos_2_mulheres():
+    total_candidatos = 100
+    total_mulheres = 30
+    total_homens = 70
+    vencedores = 5
+
+    maneiras_pelo_menos_2_mulheres = sum(comb(total_mulheres, k) * comb(total_homens, vencedores - k) for k in range(2, vencedores + 1))
+
+    total_maneiras = comb(total_candidatos, vencedores)
+
+    prob_pelo_menos_2 = maneiras_pelo_menos_2_mulheres / total_maneiras
+    return prob_pelo_menos_2
+
+# Exercício 20
+def prob_pelo_menos_1_especialista():
+    total_candidatos = 10
+    especialistas = 4
+    nao_especialistas = 6
+    contratados = 3
+
+    maneiras_pelo_menos_1_especialista = sum(comb(especialistas, k) * comb(nao_especialistas, contratados - k) for k in range(1, contratados + 1))
+
+    total_maneiras = comb(total_candidatos, contratados)
+
+    prob_pelo_menos_1 = maneiras_pelo_menos_1_especialista / total_maneiras
+    return prob_pelo_menos_1
+
+# Resultados
+print("Exercício 10:", prob_defeito_linha_b())
+print("Exercício 11:", prob_matematica_ou_fisica())
+print("Exercício 12:", prob_pelo_menos_uma_medida())
+print("Exercício 13:", prob_defeito())
+print("Exercício 14:", prob_medico2_dado_diagnostico_correto())
+print("Exercício 15:", prob_ataque_dado_alerta())
+print("Exercício 16:", prob_doente_dado_positivo())
+print("Exercício 17:", prob_exatamente_2_mulheres())
+print("Exercício 18:", prob_todas_vermelhas())
+print("Exercício 19:", prob_pelo_menos_2_mulheres())
+print("Exercício 20:", prob_pelo_menos_1_especialista())
