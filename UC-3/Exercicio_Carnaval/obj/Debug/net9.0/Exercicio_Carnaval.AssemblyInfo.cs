@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Exercicio_Carnaval")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2371ac474644c2ed320348a9da4aa20e077c8ad9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04161dbc0b99af8a5e980b0d37362ed595679b5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Exercicio_Carnaval")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Exercicio_Carnaval")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
