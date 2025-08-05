@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block title %}Nova Venda{% endblock %}
+{% block page_title %}Nova Venda{% endblock %}
+
+{% block extra_css %}
+<style>
+    .produto-item {
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .produto-item:last-child {
+        margin-bottom: 0;
+    }
+    .total-venda {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <form method="post" id="venda-form">
+            {% csrf_token %}
+            
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        {{ venda_form.cliente.label_tag }}
+                        {{ venda_form.cliente }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        {{ venda_form.vendedor.label_tag }}
+                        {{ venda_form.vendedor }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        {{ venda_form.forma_pagamento.label_tag }}
+                        {{ venda_form.forma_pagamento }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        {{ venda_form.desconto.label_tag }}
+                        <div class="input-group">
+                            {{ venda_form.desconto }}
+                            <span class="input-group-text">R$</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        {{ venda_form.observacoes.label_tag }}
+                        {{ venda_form.observacoes }}
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Itens da Venda</h5>
+            
+            <div id="itens-container">
+                <!-- Itens serão adicionados aqui via JavaScript -->
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <button type="button" id="adicionar-item" class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-plus-circle"></i> Adicionar Item
+                </button>
+            </div>
+            
+            <div class="d-flex justify-content-end mb-4">
+                <div class="text-end">
+                    <div class="mb-2">
+                        <span class="me-3">Subtotal:</span>
+                        <span id="subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="me-3">Desconto:</span>
+                        <span id="desconto-total">R$ 0,00</span>
+                    </div>
+                    <div class="total-venda">
+                        <span class="me-3">Total:</span>
+                        <span id="total">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-between">
+                <a href="{% url 'lista_vendas' %}" class="btn btn-secondary">Cancelar</a>
+                <div>
+                    <button type="submit" name="salvar" class="btn btn-primary">Salvar</button>
+                    <button type="submit" name="finalizar" class="btn btn-success">Finalizar Venda</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Template para novos itens (hidden) -->
+<div id="item-template" class="d-none">
+    <div class="produto-item">
+        <input type="hidden" name="item_id" value="">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Produto</label>
+                <select class="form-select produto-select" name="produto" required>
+                    <option value="">Selecione um produto</option>
+                    {% for produto in produtos %}
+                    <option value="{{ produto.id }}" data-preco="{{ produto.preco_venda }}" data-estoque="{{ produto.estoque_atual }}" data-unidade="{{ produto.get_unidade_medida_display }}">
+                        {{ produto.nome }} (R$ {{ produto.preco_venda|floatformat:2 }} - Estoque: {{ produto.estoque_atual }} {{ produto.get_unidade_medida_display }})
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Quantidade</label>
+                <input type="number" step="0.001" min="0.001" class="form-control quantidade" name="quantidade" required>
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">Preço Unitário</label>
+                <input type="number" step="0.01" min="0" class="form-control preco-unitario" name="preco_unitario" required>
+            </div>
+            <div class="col-md-1">
+                <label class="form-label">Desconto</label>
+                <input type="number" step="0.01" min="0" class="form-control desconto-item" name="desconto_item" value="0">
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button type="button" class="btn btn-danger btn-sm remover-item">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    let itemCount = 0;
+    
+    // Adicionar novo item
+    $('#adicionar-item').click(function() {
+        const newItem = $('#item-template').clone().removeClass('d-none').removeAttr('id');
+        newItem.find('input[name="item_id"]').val('');
+        newItem.find('.produto-select').val('');
+        newItem.find('.quantidade').val('1');
+        newItem.find('.preco-unitario').val('0');
+        newItem.find('.desconto-item').val('0');
+        
+        const newId = 'item-' + itemCount++;
+        newItem.attr('id', newId);
+        $('#itens-container').append(newItem);
+        
+        // Atualizar totais quando os valores mudam
+        newItem.find('.quantidade, .preco-unitario, .desconto-item').on('input', calcularTotais);
+        newItem.find('.produto-select').change(function() {
+            const selectedOption = $(this).find('option:selected');
+            const preco = selectedOption.data('preco') || 0;
+            $(this).closest('.produto-item').find('.preco-unitario').val(preco);
+            calcularTotais();
+        });
+        
+        // Remover item
+        newItem.find('.remover-item').click(function() {
+            $('#' + newId).remove();
+            calcularTotais();
+        });
+        
+        calcularTotais();
+    });
+    
+    // Calcular totais da venda
+    function calcularTotais() {
+        let subtotal = 0;
+        let descontoTotal = parseFloat($('#id_desconto').val()) || 0;
+        
+        $('.produto-item').each(function() {
+            const quantidade = parseFloat($(this).find('.quantidade').val()) || 0;
+            const precoUnitario = parseFloat($(this).find('.preco-unitario').val()) || 0;
+            const descontoItem = parseFloat($(this).find('.desconto-item').val()) || 0;
+            
+            subtotal += (quantidade * precoUnitario) - descontoItem;
+        });
+        
+        const total = subtotal - descontoTotal;
+        
+        $('#subtotal').text('R$ ' + subtotal.toFixed(2).replace('.', ','));
+        $('#desconto-total').text('R$ ' + descontoTotal.toFixed(2).replace('.', ','));
+        $('#total').text('R$ ' + total.toFixed(2).replace('.', ','));
+    }
+    
+    // Atualizar totais quando o desconto geral muda
+    $('#id_desconto').on('input', calcularTotais);
+    
+    // Adicionar o primeiro item automaticamente
+    $('#adicionar-item').click();
+    
+    // Busca rápida de produtos
+    $('#buscar-produto').on('input', function() {
+        const query = $(this).val();
+        if (query.length >= 2) {
+            $.get('{% url "buscar_produto" %}', { q: query }, function(data) {
+                // Implementar busca rápida se necessário
+            });
+        }
+    });
+});
+</script>
+{% endblock %}
