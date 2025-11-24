@@ -1,0 +1,1 @@
+{'id': 1, 'cliente': {'id': 1, 'nome': 'gabriel', 'cpf': '03347999100', 'telefone': '456465465', 'endereco': 'ali'}, 'quarto': {'numero': 101, 'andar': 1, 'status': 'Ocupado'}, 'data': '26052005', 'status': 'Reservado'}
